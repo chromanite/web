@@ -1,11 +1,7 @@
 <?php 
-    session_start(); 
-    $servername = "localhost";
-    $username = "phpmyadmin";
-    $password = "user";
-    $db_name = "phpmyadmin";
+    session_start();
+    include_once '/iindex.php';
 
-    
     if (!isset($_SESSION['username'])) {
         $_SESSION['username'] = "guest";
         $_SESSION['admin'] = -1;
@@ -37,20 +33,13 @@
     
             if ($_SESSION['admin'] == -1) {
                 echo "<li class='nav-button-home'><a href='/login.php'>Login</a></li>";
-            }  
+            }
         ?>
      </ul>
 </nav>
 
     <?php
-        $conn = new mysqli($servername, $username, $password, $db_name);
-    
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
         $sql = "SELECT id, title, post, author FROM forum";
-
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {

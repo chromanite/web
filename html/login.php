@@ -47,20 +47,11 @@
         if (!isset($_POST['username']) || !isset($_POST['password']) || empty($_POST['username']) || empty($_POST['password'])) {
             die();
         } else {
-            $servername = "localhost";
-            $username = "phpmyadmin";
-            $password = "user";
-            $db_name = "phpmyadmin";
-    
-            $conn = new mysqli($servername, $username, $password, $db_name);
-    
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
+            include_once '/iindex.php';
             echo "Connected successfully";
                  
-            $sql = "SELECT username, password, admin FROM credentials WHERE username = '" . $_POST['username'] . "'"; 
-
+            $sql = "SELECT username, password, admin FROM credentials WHERE username = '" . $_POST['username'] . "'";
+            
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();
             if (password_verify($_POST['password'], $row['password'])) {

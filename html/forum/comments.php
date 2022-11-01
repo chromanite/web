@@ -1,15 +1,6 @@
 <?php
-    $servername = "localhost";
-    $username = "phpmyadmin";
-    $password = "user";
-    $db_name = "phpmyadmin";
+    include_once '/iindex.php';
 
-    $conn = new mysqli($servername, $username, $password, $db_name);
-    
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    
     if (isset($_POST['submit'])) {
         
         $sql = "INSERT INTO comments (fid, name, comments) VALUES (" . $_POST['fid'] . ", '" . $_POST['name'] . "', '" . $_POST['comments'] . "')";

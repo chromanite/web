@@ -1,14 +1,5 @@
 <?php
-    $servername = "localhost";
-    $username = "phpmyadmin";
-    $password = "user";
-    $db_name = "phpmyadmin";
-
-    $conn = new mysqli($servername, $username, $password, $db_name);
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include_once '../../iindex.php';
 
     if (isset($_POST['username']) && isset($_POST['admin']) && !isset($_POST['password'])) {
         

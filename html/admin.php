@@ -1,9 +1,6 @@
 <?php
     session_start();
-    $servername = "localhost";
-    $username = "phpmyadmin";
-    $password = "user";
-    $db_name = "phpmyadmin";
+    include_once '/iindex.php';
 
     if ($_SESSION['admin'] == 0 || $_SESSION['admin'] == -1) {
         header("Location: /index.php");
@@ -41,11 +38,6 @@
         </thead>
         <tbody>
         <?php
-            $conn = new mysqli($servername, $username, $password, $db_name);
-    
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
             echo "Connected to " . $db_name . " successfully";
     
             $sql = "SELECT username, password, admin FROM credentials";
