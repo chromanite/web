@@ -1,0 +1,155 @@
+#main-menu .nav-bar {
+  list-style: none;
+  margin-top: 40px;
+}
+
+#main-menu .nav-bar li {
+  display: inline;
+  padding: 0 10px;
+}
+
+#main-menu .nav-bar li a {
+  text-decoration: none;
+  padding-left: 25px;
+  text-transform: uppercase;
+  color: #333;
+  text-shadow: 1px 1px 1px #ccc;
+}
+
+.nav-bar .nav-button-home a {
+  background: url("https://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/home.gif") no-repeat 0px -2px transparent;
+}
+
+.nav-bar .nav-button-services a {
+  background: url("https://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/services.gif") no-repeat 0px -2px transparent;
+}
+
+.nav-bar .nav-button-products a {
+  background: url("https://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/products.gif") no-repeat 0px -2px transparent;
+}
+
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#container {
+  align-items: center;
+  background-color: #D9D9D9;
+  color: #232d35;
+  display: flex;
+  flex-direction: column;
+  font-family: segoe ui;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#form-container {
+  background-color: #f9fafc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+#title,
+#description {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.row>label {
+  flex-shrink: 1;
+  max-width: 350px;
+  padding-right: 1rem;
+  text-align: right;
+  width: 50%;
+}
+
+.row>input {
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+  height: 20px;
+  padding: 5px;
+  width: 50%;
+}
+
+.row>select {
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+  height: 30px;
+  padding: 5px;
+  width: 220px;
+}
+
+textarea {
+  flex-shrink: 1;
+  height: 50px;
+  width: 50%;
+}
+
+/* The following styles the checkboxes and containers for them.
+  */
+fieldset {
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+  margin-left: 0;
+  padding-top: 0;
+  width: 150px;
+}
+
+legend {
+  color: #5E35B1;
+  display: inline;
+  font-weight: 450;
+}
+
+fieldset>label {
+  display: block;
+  clear: left;
+}
+
+input[type="checkbox"] {
+  float: left;
+}
+
+#skills-label {
+  margin-top: 5px;
+}
+
+/*Button syling
+  */
+.btn {
+  background: none;
+  background-color: #7C4DFF;
+  border: 1px solid #c5c5c5;
+  border-radius: .25em;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: normal;
+  height: 36px;
+  margin-left: auto;
+  padding: 0 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  #form-container {
+    width: 86%;
+  }
+}
